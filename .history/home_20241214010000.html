@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftBank</title>
+    <!-- Fontawesome CDN -->
+    <script src="https://kit.fontawesome.com/c4e7b2ed2f.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Tailwind + DaisyUi CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.19/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+   
+</head>
+<body>
+   
+<main>
+  <div class="w-1/2 mx-auto p-6 bg-slate-50 h-full flex justify-between items-center">
+    <div class="flex gap-2">
+        <!-- Logo -->
+    <div>
+    <img class="w-16 h-16" src="images/mobile-banking.png">
+    </div>
+    <div>
+   <h2 class="text-2xl font-bold" id="main-balance">
+   <i class="fa-solid fa-bangladeshi-taka-sign text-orange-400"></i>15000</h2>
+   <p class="font-semibold text-xl">Available Balance</p>
+</div>
+</div>
+<div>
+<button class="border-2 w-28 px-1 py-1 rounded-xl"> <i class="fa-solid fa-right-from-bracket rotate-180 mr-2"></i>Log Out</button>
+</div>
+        </div>
+    <div class="divider w-1/2 mx-auto"></div>
+    <!-- Greetings Section -->
+        <section class="w-1/2 mx-auto p-3">
+            <h1 class="font-bold text-3xl"><i class="fa-solid fa-fire text-orange-600 text-3xl mr-2"></i>Welcome to SwiftBank!!</h1>
+            <p class="text-gray-600 text-lg">
+                SwiftBank is a cutting-edge mobile banking platform designed to provide fast, secure, and seamless financial solutions at your fingertips.
+            </p>
+        </section>
+     <!-- User Actionable Dashboard -->
+
+     <section class="w-1/2 mx-auto py-8 grid grid-cols-3 gap-3">
+        
+            <div class="w-32 h-28 ml-3 p-3">
+                <button id="show-add-money-section" class="border-2 w-32 h-28 rounded-xl bg-white text-gray-600">
+                    <p>
+                <i class="fa-solid fa-wallet text-yellow-500 text-2xl"></i>
+                    </p>
+                Add Money
+            </button>
+                </div>
+                <div class="w-32 h-28 ml-3 p-3">
+                <button id="show-cash-out-section" class="border-2 w-32 h-28 rounded-xl bg-white text-gray-600">
+                    <p>
+                <i class="fa-solid fa-wallet text-yellow-500 text-2xl"></i>
+                    </p>
+                Cash Out
+            </button>
+                </div>
+                <div class="w-32 h-28 ml-3 p-3">
+                <button class="border-2 w-32 h-28 rounded-xl bg-white text-gray-600">
+                    <p>
+                <i class="fa-solid fa-wallet text-2xl text-yellow-500"></i>
+                    </p>
+                Transfer
+            </button>
+                </div>
+                <div class="w-32 h-28 ml-3 p-3">
+                <button class="border-2 w-32 h-28 rounded-xl bg-white text-gray-600">
+                    <p>
+                <i class="fa-solid fa-wallet text-2xl text-yellow-500"></i>
+                    </p>
+                Get Bonus
+            </button>
+                </div>
+                <div class="w-32 h-28 ml-3 p-3">
+                <button class="border-2 w-32 h-28 rounded-xl bg-white text-gray-600">
+                    <p>
+                <i class="fa-solid fa-wallet text-2xl text-yellow-500"></i>
+                    </p>
+                Pay Bill
+            </button>
+                </div>
+                <div class="w-32 h-28 ml-3 p-3">
+                <button class="border-2 w-32 h-28 rounded-xl bg-white text-gray-600">
+                    <p>
+                <i class="fa-solid fa-wallet text-2xl text-yellow-500"></i>
+                    </p>
+                Transactions
+            </button>
+    </div>
+      </section>
+      <!-- Add Money Section Start -->
+      <section id ="add-money-section" class="w-1/2 mx-auto px-5 py-4 bg-slate-200">
+        <h2 class="p-2 font-bold text-xl">Add Money</h2>
+        <form class="card-body bg-white rounded-3xl">
+            <div class="form-control mb-4">
+              <label class="label">
+                <span class="label-text font-semibold text-xl">Select A Bank</span>
+              </label>
+              <select id="bank"  class="input-bordered rounded-full bg-slate-200 h-12 px-5 border-2">
+                <option value="Select Bank">Select Bank</option>
+                <option value="AB Bank PLC">AB Bank PLC</option>
+                <option value="Bangladesh Commerce Bank Limited">Bangladesh Commerce Bank Limited</option>
+                <option value="Islami Bank Bangladesh PLC">Islami Bank Bangladesh PLC</option>
+                <option value="Dutch-Bangla Bank PLC">Dutch-Bangla Bank PLC</option>
+                <option value="Jamuna Bank Limited">Jamuna Bank Limited</option>
+                <option value="Trust Bank PLC">Trust Bank PLC</option>
+              </select>
+              </div>
+
+            <div class="form-control mb-4">
+              <label class="label">
+                <span class="label-text font-semibold text-xl">Bank Account Number</span>
+              </label>
+              <input id="input-bank-account-field" type="text" placeholder="Enter 17 digit account number" class="input input-bordered rounded-full bg-slate-200" required />
+              
+            </div>
+            <div class="form-control mb-4">
+              <label class="label">
+                <span class="label-text font-semibold text-xl">Amount to Add</span>
+              </label>
+              <input id="input-amount-field" type="text" placeholder="Write Amount" class="input input-bordered rounded-full bg-slate-200" required />
+              
+            </div>
+            <div class="form-control mb-4">
+              <label class="label">
+                <span class="label-text font-semibold text-xl">5 Digit Pin</span>
+              </label>
+              <input id="input-add-money-pin-number" type="password" placeholder="Enter 5 Digit Pin" class="input input-bordered rounded-full bg-slate-200" required />
+              
+            </div>
+
+
+            <div class="form-control mb-4">
+              <button id="btn-add-money" class="bg-blue-700 font-bold text-xl text-white p-3 rounded-full">Add Money</button>
+            </div>
+          </form>
+      </section>
+      <!-- Add Money Section End -->
+
+      <!-- Cash Out Section Start -->
+      <section id ="cash-out-section" class="hidden w-1/2 mx-auto px-5 py-4 bg-slate-200">
+        <h2 class="p-2 font-bold text-xl">Cash Out</h2>
+        <form class="card-body bg-white rounded-3xl">
+            <div class="form-control mb-4">
+              <label class="label">
+                <span class="label-text font-semibold text-xl">Agent Number</span>
+              </label>
+              <input type="number" id="input-cash-out-phone" placeholder="Enter 11 digit number" class="input input-bordered rounded-full bg-slate-200" maxlength="11" required >
+              </div>
+             <div class="form-control mb-4">
+              <label class="label">
+                <span class="label-text font-semibold text-xl">Withdrawal Amount</span>
+              </label>
+              <input id="input-cash-out-field" type="text" placeholder="Write Amount" class="input input-bordered rounded-full bg-slate-200" required />
+            </div>
+            <div class="form-control mb-4">
+              <label class="label">
+                <span class="label-text font-semibold text-xl">5 Digit Pin</span>
+              </label>
+              <input id="input-cash-out-pin-number" type="password" placeholder="Enter 5 Digit Pin" class="input input-bordered rounded-full bg-slate-200" required />
+              </div>
+          <div class="form-control mb-4">
+              <button id="btn-cash-out" class="bg-blue-700 font-bold text-xl text-white p-3 rounded-full">Cash Out</button>
+            </div>
+          </form>
+      </section>
+     <!-- Cash Out Section End -->
+
+     <!-- Money Transfer Section Start -->
+     <section id ="cash-out-section" class="w-1/2 mx-auto px-5 py-4 bg-slate-200">
+      <h2 class="p-2 font-bold text-xl">Money Transfer</h2>
+      <form class="card-body bg-white rounded-3xl">
+          <div class="form-control mb-4">
+            <label class="label">
+              <span class="label-text font-semibold text-xl">Agent Number</span>
+            </label>
+            <input type="number" id="input-cash-out-phone" placeholder="Enter 11 digit number" class="input input-bordered rounded-full bg-slate-200" maxlength="11" required >
+            </div>
+           <div class="form-control mb-4">
+            <label class="label">
+              <span class="label-text font-semibold text-xl">Withdrawal Amount</span>
+            </label>
+            <input id="input-cash-out-field" type="text" placeholder="Write Amount" class="input input-bordered rounded-full bg-slate-200" required />
+          </div>
+          <div class="form-control mb-4">
+            <label class="label">
+              <span class="label-text font-semibold text-xl">5 Digit Pin</span>
+            </label>
+            <input id="input-cash-out-pin-number" type="password" placeholder="Enter 5 Digit Pin" class="input input-bordered rounded-full bg-slate-200" required />
+            </div>
+        <div class="form-control mb-4">
+            <button id="btn-cash-out" class="bg-blue-700 font-bold text-xl text-white p-3 rounded-full">Cash Out</button>
+          </div>
+        </form>
+    </section>
+     <!-- Money Transfer Section End -->
+      <script src="Jscript/utilities.js"></script>
+      <script src="Jscript/add-money.js"></script>
+      <script src="Jscript/cash-out.js"></script>
+      <script src="Jscript/features.js"></script>
+       </main>
+    
+</body>
+</html>

@@ -1,0 +1,20 @@
+function handleButtonClicked(activeButtonId){
+    const buttons = ['show-add-money-section', 'show-cash-out-section', 'show-money-transfer-section',
+        'show-get-bonus-section', 'show-pay-bill-section', 'show-transaction-history'
+    ];
+    for(const button of buttons){
+         const button = document.getElementById(id);
+         button.classList.remove( 'border-1', 'border-green-500', 
+            'ring-2', 'ring-orange-300', 
+            'text-black', 'font-semibold', 'bg-white');
+    }
+    const activeButton = document.getElementById(activeButtonId);
+    activeButton.classList.add( 'border-1', 'border-green-500', 
+        'ring-2', 'ring-orange-300', 
+        'text-black', 'font-semibold', 'bg-white');
+};
+
+
+
+
+

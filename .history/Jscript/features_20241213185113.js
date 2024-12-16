@@ -1,0 +1,7 @@
+
+// The add money section will show when the add money button is clicked.
+document.getElementById('show-add-money-section').addEventListener('click', function(){
+    showSectionById('add-money-section');
+});
+
+// The cash-out section will show when the cash-out button is clicked.

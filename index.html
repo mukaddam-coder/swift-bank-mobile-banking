@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftBank</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Tailwind + DaisyUi CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.19/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fontawesome CDN -->
+    <script src="https://kit.fontawesome.com/c4e7b2ed2f.js" crossorigin="anonymous"></script>
+  
+    
+</head>
+<body class="container mx-auto">
+   <main>
+    <div class="w-1/2 mx-auto bg-slate-200 p-6 h-full">
+        <h1 class="text-center font-bold text-2xl">SwiftBank</h1>
+        <p class="text-center font-semibold text-lg">Implies fast, seamless, and reliable mobile banking services.</p>
+        <p class="text-center"><img class="h-60 w-60 mx-auto" src="images/payoo.png"></p>
+        <form class="card-body bg-white rounded-3xl">
+            <div class="form-control mb-4">
+              <label class="label">
+                <span class="label-text font-semibold text-xl">Mobile Number</span>
+              </label>
+              <input id="input-text-field" type="text" placeholder="Enter your number" class="input input-bordered rounded-full bg-slate-200" required />
+            </div>
+            <div class="form-control mb-4">
+              <label class="label">
+                <span class="label-text font-semibold text-xl">5 Digit Pin</span>
+              </label>
+              <input id="input-pin-field" type="password" placeholder="Enter 5 Digit Pin" class="input input-bordered rounded-full bg-slate-200" required />
+              
+            </div>
+            <div class="form-control mb-4">
+              <button id="btn-login" class="bg-blue-700 font-bold text-xl text-white p-3 rounded-full">Login</button>
+            </div>
+          </form>
+    </div>
+   </main>
+    <script src="Jscript/login.js"></script>
+    <script src="Jscript/utilities.js"></script>
+</body>
+</html>
